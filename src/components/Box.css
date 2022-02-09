@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Card {
+  margin: 10%;
+  width: 15rem;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* flex-direction: row; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  /* float: left; */
+}
+
+.CardBlock {
+  margin: 0 -5px;
+}
+
+/* .CardBlock::after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+.CardItem {
+  /* float: left; */
+  width: 30%;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .CardItem {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
