@@ -66,7 +66,7 @@ const Cards = () => {
             <Routes>
                 <Route path='/' element={<HomePage />}>
                     <Route index element={<HomePage />} />
-                    <Route path='/ApplicationMenu' component={<ApplicationMenu />} />
+                    <Route path='/ApplicationMenu' element={<ApplicationMenu />} />
                 </Route>
             </Routes>
         </BrowserRouter>     
