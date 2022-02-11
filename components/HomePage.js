@@ -1,84 +1,63 @@
 import React from 'react';
 import './HomePage.css'
-import bg from '../images/beach.png'
 import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
-// import {
-//   Link,
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-// } from "react-router-dom";
 import ApplicationMenu from './ApplicationMenu'
+import Statistic from './Statistic';
 
-const Cards = () => {
+const Home = () => {
 
     const cardInfo = [
         {
-          title: "Residential 1",
+          title: "Residential Conversion",
+          routeTo: "/applicationmenu",
         },
         {
-          title: "Residential 2",
+          title: "Residential Construction",
+          routeTo: "/applicationmenu",
         },
         {
-          title: "Commercial 1",
+          title: "Commercial Conversion",
+          routeTo: "/applicationmenu",
         },
         {
-          title: "Commercial 2",
-        },
-        {
-          title: "User",
+          title: "Commercial Construction",
+          routeTo: "/applicationmenu",
         },
         {
           title: "Statistic",
+          routeTo: "/statistic"
         },
       ];
 
       const renderCard = (card, index) => {
         return (
+          <BrowserRouter>
             <div className='column'>
-                <div key={index} className="card">
+                <div key={index} className='card'>
                     <div className='Title'>{card.title}</div>
-                    <Link to='/ApplicationMenu'><button type="button" className="btn btn-outline-info">View</button></Link>      
+                    <Link to={card.routeTo}><button type="button" className="btn btn-outline-info">View</button></Link>      
                 </div>
             </div>
+            </BrowserRouter>
             
         );
       };
 
       const HomePage = () => {
-        return <div style={{
-          backgroundImage: `url(${bg})`,
-          height:'100vh',
-          marginTop:'-50px',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-          }}>
-          <div className='row'>
+        return <div className='row'>
                 {cardInfo.map(renderCard)}  
         </div>;
-      </div>
       }
   return <>
-        
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<HomePage />}>
-                    <Route index element={<HomePage />} />
-                    <Route path='/ApplicationMenu' element={<ApplicationMenu />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>     
+        <HomePage />
 
-        {/* <Router>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/ApplicationMenu" component={ApplicationMenu} />
-          <Redirect to="/" />
-        </Switch>
-      </Router> */}
+        <BrowserRouter>
+        <Routes>
+                    <Route path='/applicationmenu' component={ApplicationMenu} />
+                    <Route path='/statistic' component={Statistic} />
+        </Routes>
+        </BrowserRouter>     
   </>
 };
 
-export default Cards;
+export default Home;
