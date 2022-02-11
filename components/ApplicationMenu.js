@@ -2,7 +2,6 @@ import {Link, useLocation, BrowserRouter, Routes, Route} from "react-router-dom"
 import { useEffect, useRef, useState } from 'react';
 import './ApplicationMenu.css';
 
-
 const sidebarNavItems = [
     {
         display: 'New Applications',
