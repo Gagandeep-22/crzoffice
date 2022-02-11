@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Search.css';
 
 const Search = () => {
   const [text, setText] = useState("");
@@ -6,7 +7,7 @@ const Search = () => {
   const onSubmit = evt => {
     evt.preventDefault();
     if (text === "") {
-      alert("Please enter something!");
+      alert("Please enter something");
     } else {
       alert(text);
       setText("");
@@ -15,21 +16,22 @@ const Search = () => {
 
   const onChange = evt => setText(evt.target.value);
 
-  return (
-    <div className="search">
-      <form onSubmit={onSubmit} className="search__text">
+  return (<div className="wrap">
+    <form onSubmit={onSubmit}>
+      <div className="search">
         <input
-          type="text"
-          name="text"
-          placeholder="Search applications"
-          value={text}
-          onChange={onChange}
-        />
-        <button type="submit" className="search__button">
-          Search
-        </button>
-      </form>
+        type="text"
+        name="text"
+        className="searchTerm"
+        placeholder="Search application"
+        value={text}
+        onChange={onChange}
+
+    />
+    <button type="submit" className="searchButton">Search</button>
     </div>
+  </form>
+  </div>
   );
 };
 export default Search;
