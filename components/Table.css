@@ -36,12 +36,12 @@ th, td
 
 .cl1
 {
-  background-color: lightgreen;
+  background-color: lightblue;
 }
 
 .cl2
 {
-  background-color: green;
+  background-color: skyblue;
 }
 
 @media all and (max-width: 900px)

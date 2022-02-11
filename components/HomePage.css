@@ -69,11 +69,4 @@
     .card {
         border-radius: 5%;
     }
-
-    .background {
-        background-size: cover;
-        /* height: 100vh; */
-        background-repeat: repeat;
-        background-attachment: fixed;
-    }
 }
