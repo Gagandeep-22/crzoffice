@@ -1,5 +1,4 @@
-import { Link, useLocation, BrowserRouter, Routes, Route } from "react-router-dom";
-import bg from '../images/beach.png'
+import {Link, useLocation, BrowserRouter, Routes, Route} from "react-router-dom";
 import { useEffect, useRef, useState } from 'react';
 import './ApplicationMenu.css';
 
@@ -29,18 +28,8 @@ const sidebarNavItems = [
 
 const Sidebar = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [stepHeight, setStepHeight] = useState(0);
     const sidebarRef = useRef();
-    const indicatorRef = useRef();
     const location = useLocation();
-
-    useEffect(() => {
-        setTimeout(() => {
-            const sidebarItem = sidebarRef.current.querySelector('.sidebar__menu__item');
-            indicatorRef.current.style.height = `${sidebarItem.clientHeight}px`;
-            setStepHeight(sidebarItem.clientHeight);
-        }, 50);
-    }, []);
 
     //change active index
     useEffect(() => {
@@ -52,13 +41,6 @@ const Sidebar = () => {
     return <div className='sidebar'>
     
         <div ref={sidebarRef} className="sidebar__menu">
-            <div
-                ref={indicatorRef}
-                className="sidebar__menu__indicator"
-                style={{
-                    transform: `translateX(-50%) translateY(${activeIndex * stepHeight}px)`
-                }}
-            ></div>
             {
                 sidebarNavItems.map((item, index) => (
                     <Link to={item.to} key={index}>
@@ -77,15 +59,7 @@ const Sidebar = () => {
 
 
 const AppLayout = () => {
-    return <div style={{
-            backgroundImage: `url(${bg})`,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed',
-            backgroundSize: 'cover',
-            height: '100vh',
-            // padding: '50px 0px 0px 330px'
-    }}>
+    return <div>
         <Sidebar />
     </div>;
 };
