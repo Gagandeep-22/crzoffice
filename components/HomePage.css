@@ -19,22 +19,24 @@
 }
 
 /* Style the counter cards */
-.card {
+.homeCard {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    padding: 16px;
+    padding: inherit;
     text-align: center;
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     background-color: #f3f3f3;
     height: 14rem;
     border-radius: 10%;
 }
 
-.card:hover {
+.homeCard:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1); /* this adds the "card" effect */
 }
 
 .Title {
-    padding: 1%;
+    padding: 2%;
     font-weight: bold;
 }
 
@@ -51,7 +53,7 @@
         margin: 10px;
     }
 
-    .card {
+    .homeCard {
         border-radius: 5%;
         height: 10rem;
     }
