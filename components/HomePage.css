@@ -6,29 +6,17 @@
 
 /* Float four columns side by side */
 .column {
-    width: 33%;
-    padding: 25px;
-    height: auto;
+    margin: 1%;
+    width: 30%;
+    padding: 15px;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {
     justify-content: center;  
     display: flex;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    position: relative;
 }
-
-/* Clear floats after the columns */
-/* .row:after {
-    content: "";
-    display: table;
-    clear: both;
-} */
 
 /* Style the counter cards */
 .card {
@@ -37,9 +25,8 @@
     text-align: center;
     justify-content: center;
     background-color: #f3f3f3;
-    height: 200px;
+    height: 14rem;
     border-radius: 10%;
-    
 }
 
 .card:hover {
@@ -51,22 +38,21 @@
     font-weight: bold;
 }
 
+.btn {
+    width: 10rem;
+}
 .btn:hover {
     color: white;
 }
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 720px) {
     .column {
-        width: 100%;
-        display: block;
+        width: 90%;
         margin: 10px;
-    }
-    .row {
-        /* margin: 1px; */
-        margin-top: 500px;
     }
 
     .card {
         border-radius: 5%;
+        height: 10rem;
     }
 }
