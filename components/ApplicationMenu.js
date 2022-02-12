@@ -1,81 +1,29 @@
-import {Link, useLocation, BrowserRouter, Routes, Route} from "react-router-dom";
-import { useEffect, useRef, useState } from 'react';
-import './ApplicationMenu.css';
+import React, { useState } from 'react'
+// import RightSide from './RightSide';
+import './ApplicationMenu.css'
 
-const sidebarNavItems = [
-    {
-        display: 'New Applications',
-        to: '/newApplication',
-        section: 'newApplication'
-    },
-    {
-        display: 'Pending Applications',
-        to: '/pendingApplication',
-        section: 'pendingApplication'
-    },
-    {
-        display: 'Seen Applications',
-        to: '/seenApplication',
-        section: 'seenApplication'
-    },
-    {
-        display: 'Cleared Applications',
-        to: '/clearedApplication',
-        section: 'clearedApplication'
-    },
-]
+const ApplicationMenu = () => {
 
-const Sidebar = () => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const sidebarRef = useRef();
-    const location = useLocation();
-
-    //change active index
-    useEffect(() => {
-        const curPath = window.location.pathname.split('/')[1];
-        const activeItem = sidebarNavItems.findIndex(item => item.section === curPath);
-        setActiveIndex(curPath.length === 0 ? 0 : activeItem);
-    }, [location]);
-
-    return <div className='sidebar'>
+  const [active, setActive] = useState("");
+  return (
+    <div className='sidebar'>
+    <div className='sidebar__menu'>
+    <button type='button' onClick={() => setActive("NewApplication")} className={`sidebar__menu__item ${active === "NewApplication"  ? 'active' : ''}`}>New Applications</button>
+    <button type='button' onClick={() => setActive("PendingApplication")} className={`sidebar__menu__item ${active === "PendingApplication" ? 'active' : ''}`}>Pending Applications</button>
+    <button type='button' onClick={() => setActive("SeenApplication")} className={`sidebar__menu__item ${active === "SeenApplication" ? 'active' : ''}`}>Seen Applications</button>
+    <button type='button' onClick={() => setActive("ClearedApplication")} className={`sidebar__menu__item ${active === "ClearedApplication" ? 'active' : ''}`}>Cleared Applications</button>
+    </div>
     
-        <div ref={sidebarRef} className="sidebar__menu">
-            {
-                sidebarNavItems.map((item, index) => (
-                    <Link to={item.to} key={index}>
-                        <div className={`sidebar__menu__item ${activeIndex === index ? 'active' : ''}`}>
-                            <div className="sidebar__menu__item__text">
-                                {item.display}
-                            </div>
-                        </div>
-                    </Link>
-                ))
-            }
-        </div>
-    </div>;
-};
 
-
-
-const AppLayout = () => {
-    return <div>
-        <Sidebar />
-    </div>;
-};
-
-function ApplicationMenu() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<AppLayout />}>
-                    <Route index element={<AppLayout />} />
-                    <Route path='/newApplication' element={<AppLayout />} />
-                    <Route path='/pendingApplication' element={<AppLayout />} />
-                    <Route path='/seenApplication' element={<AppLayout/>} />
-                    <Route path='/clearedApplication' element={<AppLayout />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    );
+    {/* to show  */}
+    {/* <div>
+    {active === "NewApplication" && <RightSide title="New" />}
+    {active === "PendingApplication" && <RightSide title="Pending" />}
+    {active === "SeenApplication" && <RightSide title="Seen" />}
+    {active === "ClearedApplication" && <RightSide title="Cleared" />}
+    </div> */}
+    </div>
+  )
 }
-export default ApplicationMenu;
+
+export default ApplicationMenu
