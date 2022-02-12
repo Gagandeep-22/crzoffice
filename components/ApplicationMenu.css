@@ -2,23 +2,22 @@
   position: relative;
   width: 300px;
 }
-.sidebar__menu {
-  position: relative;
-}
 .sidebar__menu__item {
   display: flex;
-  align-items: center;
-  place-content: flex-start;
+  border: none;
+  width: 100%;
   padding: 1rem 3rem;
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight:500;
   color: #000;
   transition: color 0.3s ease-in-out;
   background-color: #488BCB;
   margin-top: 1rem;
   border-radius:5px;
+  cursor:pointer;
 }
 .sidebar__menu__item.active {
   color: #fff;
   background-color: #159C4C;
+  transition: color 0.3s ease-in-out;
 }
