@@ -1,8 +1,6 @@
 import React from 'react';
 import './HomePage.css'
-import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
-import ApplicationMenu from './ApplicationMenu'
-import Statistic from './Statistic';
+import { Link, BrowserRouter } from "react-router-dom";
 
 const Home = () => {
 
@@ -33,7 +31,7 @@ const Home = () => {
         return (
           <BrowserRouter>
             <div className='column'>
-                <div key={index} className='card'>
+                <div key={index} className='homeCard'>
                     <div className='Title'>{card.title}</div>
                     <Link to={card.routeTo}><button type="button" className="btn btn-outline-info">View</button></Link>      
                 </div>
@@ -49,14 +47,7 @@ const Home = () => {
         </div>;
       }
   return <>
-        <HomePage />
-
-        <BrowserRouter>
-        <Routes>
-                    <Route path='/applicationmenu' component={ApplicationMenu} />
-                    <Route path='/statistic' component={Statistic} />
-        </Routes>
-        </BrowserRouter>     
+        <HomePage />  
   </>
 };
 
