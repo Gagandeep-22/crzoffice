@@ -33,10 +33,13 @@ const Home = () => {
             <div className='column'>
                 <div key={index} className='homeCard'>
                     <div className='Title'>{card.title}</div>
-                    <Link to={card.routeTo}><button type="button" className="btn btn-outline-info">View</button></Link>      
+                    <br/>
+                    <div>
+                      <Link to={card.routeTo}><button type="button" className="btn btn-outline-info">View</button></Link>   
+                    </div>   
                 </div>
             </div>
-            </BrowserRouter>
+          </BrowserRouter> 
             
         );
       };
