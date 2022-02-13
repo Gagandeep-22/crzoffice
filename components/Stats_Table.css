@@ -2,8 +2,8 @@
 
 .TableContainer
 {
-  background-image: url(beach.jpg);
-  background-size: cover;
+/*   background-image: url(beach.jpg);
+  background-size: cover; */
   height: 650px;
   width: 1300px;
   position: fixed;
