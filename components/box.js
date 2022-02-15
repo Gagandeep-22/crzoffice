@@ -8,10 +8,17 @@ function Box() {
      <h1>Applications</h1>
      
      <ul className="newclass">
-      <li className='r1' ><a href="Application">Application</a></li>
       <li className='r1'><a href="">Application</a></li>
       <li className='r1'><a href="">Application</a></li>
       <li className='r1'><a href="">Application</a></li>
+      <li className='r1'><a href="">Application</a></li>
+      <li className='r1'><a href="">Application</a></li>
+      <li className='r1'><a href="">Application</a></li>
+      <li className='r1'><a href="">Application</a></li>
+      <li className='r1'><a href="">Application</a></li>
+      <li className='r1'><a href="">Application</a></li>
+      <li className='r1'><a href="">Application</a></li>
+    
      
     </ul>
      </div>
