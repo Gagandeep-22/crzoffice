@@ -2,6 +2,8 @@
   width: 100%;
   position: relative;
   display: flex;
+  vertical-align: top;
+  margin-top: 3%;
 }
 
 .searchTerm {
@@ -32,6 +34,9 @@
 }
 
 .wrap{
-  width: 300px;
+  width: 30%;
   position: relative;
+  display: inline-block;
+  margin-left: 1em;
+  /* margin-top:-50%; */
 }

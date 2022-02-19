@@ -1,6 +1,6 @@
 
 import  './box.css';
-//import react from 'react';
+import react from 'react';
 function Box() {
   return (
     
@@ -8,16 +8,16 @@ function Box() {
      <h1>Applications</h1>
      
      <ul className="newclass">
-      <li className='r1'><a href="">Application</a></li>
-      <li className='r1'><a href="">Application</a></li>
-      <li className='r1'><a href="">Application</a></li>
-      <li className='r1'><a href="">Application</a></li>
-      <li className='r1'><a href="">Application</a></li>
-      <li className='r1'><a href="">Application</a></li>
-      <li className='r1'><a href="">Application</a></li>
-      <li className='r1'><a href="">Application</a></li>
-      <li className='r1'><a href="">Application</a></li>
-      <li className='r1'><a href="">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
+      <li className='r1'><a href="applicationview">Application</a></li>
     
      
     </ul>

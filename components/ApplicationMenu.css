@@ -1,12 +1,14 @@
 .sidebar {
   position: relative;
   width: 300px;
+  display: inline-block;
+  vertical-align: top;
 }
 .sidebar__menu__item {
   display: flex;
   border: none;
   width: 100%;
-  padding: 1rem 3rem;
+  padding: 1rem ;
   font-size: 1.25rem;
   font-weight:500;
   color: #000;

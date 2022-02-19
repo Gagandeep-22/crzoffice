@@ -4,23 +4,26 @@
 {
 /*   background-image: url(beach.jpg);
   background-size: cover; */
-  height: 650px;
+  /* height: 650px;
   width: 1300px;
-  position: fixed;
+  position: relative; */
+  width:100%;
+  position: relative;
+  text-align: center;
 }
 
 .TableHeader
 {
-  left:10%;
-  top:10%;
+  /* left:10%;
+  top:10%; */
   position: relative;
  
 }
 
 .StatsTable
 {   
-    left:10%;
-    top:10%;
+    /* left:10%;
+    top:10%; */
     position: relative;
     border-collapse: collapse;
     width:70%;

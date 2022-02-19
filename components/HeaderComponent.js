@@ -1,6 +1,6 @@
-
+import SealImg from '../assets/sealimg.png'
 import React,{Component} from "react";
-import {Collapse, Navbar,Nav, NavItem, NavLink, NavbarText,NavbarToggler }from "reactstrap";
+// import {Collapse, Navbar,Nav, NavItem, NavLink, NavbarText,NavbarToggler }from "reactstrap";
 
 class Header extends Component{
     constructor(props){
@@ -17,23 +17,23 @@ class Header extends Component{
       }
     render(){
         return(
-            <>
-                <div className="AppHeader">
-                    <div style={{display:"inline-block",margin:'1'}}>
-                        <img src='assets/sealimg.png'style={{height:'8em' ,display:"inline-block",padding:'1em'}}/>
+            <div className='AppHeader'>
+                    <div className='SealImg'>
+                        <img src={SealImg} style={{height:'8em'}}/>
                     </div>
-                    <div style={{display:"inline-block",verticalAlign:'middle'}}>
-                        <h2><strong> ಉಡುಪಿ ಜಿಲ್ಲೆ</strong> </h2>
-                        <h3 style={{color:"#ffffff"}}>UDUPI DISTRICT</h3>
+                    <div className='District'>
+                        <h1><strong> ಉಡುಪಿ ಜಿಲ್ಲೆ</strong> </h1>
+                        {/* <br/> */}
+                        <h2 style={{color:"#ffffff"}}>UDUPI DISTRICT</h2>
                     </div>
-                           
-                    <h3 style={{color:"white",position:'sticky',right:'0'}}>Coastal Regulation Zone</h3>
-                </div>
-                <Navbar expand='md' className="Navigation" >
+                    <div className='Coastal'>       
+                         <h1>Coastal Regulation Zone</h1>
+                    </div>
+              { /* <Navbar expand='md' className="Navigation" >
                     <div className="container">
                     <NavbarToggler className='me-2' onClick={this.toggleNav} style={{backgroundColor:"red"}}/>
-                        <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav navbar >
+                        <Collapse isOpen={this.state.isNavOpen} pills>
+                            <Nav pills >
                                 <NavItem>
                                     <NavLink style={{color:'black'}} href='/home' active>Home</NavLink>
                                 </NavItem>
@@ -50,8 +50,8 @@ class Header extends Component{
                         <NavbarText><NavLink style={{color:'black'}}>Logout</NavLink></NavbarText>
                         </Collapse>
                     </div>                  
-                </Navbar>
-            </>
+                </Navbar> */}
+            </div>
         ); 
     }
 }

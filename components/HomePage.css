@@ -7,8 +7,8 @@
 /* Float four columns side by side */
 .column {
     margin: 1%;
-    width: 30%;
     padding: 15px;
+    display: inline-flex;
 }
 
 /* Remove extra left and right margins, due to padding in columns */
@@ -29,6 +29,7 @@
     background-color: #f3f3f3;
     height: 14rem;
     border-radius: 10%;
+    margin: 1%;
 }
 
 .homeCard:hover {
