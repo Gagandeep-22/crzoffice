@@ -13,7 +13,10 @@
     justify-content: space-evenly;
     background-color: bisque;
     margin: 0px 10vw 0px 10vw;
-    width:80vw
+    width:80vw;
+    font-size: 1.3vw;
+    border: 1.5px solid black;
+    border-radius: 2px;
   }
   
   .tb
