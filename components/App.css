@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-   background-image:url('../assets/bgimg.png') ; 
+   /* background-image:url('../assets/bgimg.png') ;  */
    /* ?background-color: #121212; */
    /* background-color: #61dafb;  */
    background-size:cover;
@@ -19,7 +19,7 @@
 
 .AppHeader {
  
-  background-image:url('../assets/headerimg.png') ;
+  background-image:url('../assets/coast.png') ;
   text-align: left;
   background-size:cover;
   /* border-style: solid; */
@@ -36,15 +36,15 @@
 }
 .applist{
   background-color: #ffffff;
-  
-    padding-left:1%
+  padding-left:1%;
+  text-align:justify
 }
-.Navigation{
+/* .Navigation{
   color: black;
   background-color: #3386ff;
   padding: 0;
   text-align: left;
-}
+} */
 .SealImg{
   display:inline-block;
   height:9%;
@@ -65,7 +65,7 @@
   color:#ffffff
 }
 .MainContent{
-  background-image:url('../assets/bgimg.png') ;
+  background-image:url('../assets/beach.png') ;
   background-size:cover;
   padding: 1em;
   height:120vh;

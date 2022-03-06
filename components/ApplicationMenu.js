@@ -3,9 +3,12 @@ import React, { useState } from 'react'
 import './ApplicationMenu.css';
 import Box from './Box';
 import  Search  from './Search';
-const ApplicationMenu = () => {
-
+const ApplicationMenu = (props) => {
+  console.log("menu props",props);
   const [active, setActive] = useState("");
+  function onSelect(application){
+      props.onSelect(application);
+  }
   return (
     <>
     <div className='sidebar'>
@@ -16,8 +19,8 @@ const ApplicationMenu = () => {
         <button type='button' onClick={() => setActive("ClearedApplication")} className={`sidebar__menu__item ${active === "ClearedApplication" ? 'active' : ''}`}>Cleared Applications</button>
       </div>
     </div>
-    <Box/>
-    <Search/>
+    <Box onClick={(application)=>onSelect(application)}/>
+    <Search onClick={(application)=>onSelect(application)}/>
     </>
   )
 }

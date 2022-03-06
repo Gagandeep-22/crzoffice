@@ -1,4 +1,4 @@
-*{
+.homeCard *{
     box-sizing: border-box;
     margin: auto;
 }
@@ -28,7 +28,7 @@
     flex-direction: column;
     background-color: #f3f3f3;
     height: 14rem;
-    border-radius: 10%;
+    border-radius: 15%;
     margin: 1%;
 }
 

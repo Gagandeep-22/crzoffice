@@ -29,7 +29,7 @@ const Home = () => {
 
       const renderCard = (card, index) => {
         return (
-            <div className='col-md-4'>
+            <div key={index} className='col-md-4'>
                 <div key={index} className='homeCard'>
                     <div className='Title'>{card.title}</div>
                     <br/>
