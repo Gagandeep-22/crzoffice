@@ -22,15 +22,14 @@ const Home = () => {
           routeTo: "/applicationmenu",
         },
         {
-          title: "Statistic",
-          routeTo: "/statistic"
+          title: "Statistics",
+          routeTo: "/statistics"
         },
       ];
 
       const renderCard = (card, index) => {
         return (
-          <BrowserRouter>
-            <div className='column'>
+            <div key={index} className='col-md-4'>
                 <div key={index} className='homeCard'>
                     <div className='Title'>{card.title}</div>
                     <br/>
@@ -39,8 +38,6 @@ const Home = () => {
                     </div>   
                 </div>
             </div>
-          </BrowserRouter> 
-            
         );
       };
 

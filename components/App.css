@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+   /* background-image:url('../assets/bgimg.png') ;  */
+   /* ?background-color: #121212; */
+   /* background-color: #61dafb;  */
+   background-size:cover;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+.AppHeader {
+ 
+  background-image:url('../assets/coast.png') ;
+  text-align: left;
+  background-size:cover;
+  /* border-style: solid; */
+  vertical-align: middle;
+}
+.District{
+  /* border-style: solid; */
+  margin: 2em;
+  display: inline-block;
+  /* border-color: red; */
+  vertical-align:top;
+  font-size: larger;
+  /* width:50%; */
+}
+.applist{
+  background-color: #ffffff;
+  padding-left:1%;
+  text-align:justify
+}
+/* .Navigation{
+  color: black;
+  background-color: #3386ff;
+  padding: 0;
+  text-align: left;
+} */
+.SealImg{
+  display:inline-block;
+  height:9%;
+  /* padding:1em; */
+  /* border-style:solid; */
+  /* border-color: crimson; */
+  margin-top: 2%
+}
+.Coastal{
+  /* border-style: solid; */
+  margin: 3%;
+  display: inline-block;
+  /* border-color: red; */
+  vertical-align:top;
+  font-size:larger;
+  position:relative;
+  left:30%;
+  color:#ffffff
+}
+.MainContent{
+  background-image:url('../assets/beach.png') ;
+  background-size:cover;
+  padding: 1em;
+  height:120vh;
+  /* display: flex; */
+}
+.cardwhole{
+  width:50%;
+  padding: 5%;
+  margin:3% auto;
+  color: rgb(98, 82, 247);
+}

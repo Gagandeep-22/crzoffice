@@ -2,31 +2,34 @@
 
 .TableContainer
 {
-  /* background-image: url(beach.jpg);
+/*   background-image: url(beach.jpg);
   background-size: cover; */
-  height: 650px;
+  /* height: 650px;
   width: 1300px;
-  position: fixed;
+  position: relative; */
+  width:100%;
+  position: relative;
+  text-align: center;
 }
 
-h1
+.TableHeader
 {
-  left:10%;
-  top:10%;
+  /* left:10%;
+  top:10%; */
   position: relative;
  
 }
 
-table
+.StatsTable
 {   
-    left:10%;
-    top:10%;
+    /* left:10%;
+    top:10%; */
     position: relative;
     border-collapse: collapse;
     width:70%;
 }
 
-th, td
+.StatsRow
 {
   border: 1px solid black;
   text-align: left;
